@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Freshroots Demand Desk</title>
+  <meta name="description" content="Twice-weekly demand planning for Freshroots: Raghav's rules, exception queue and procurement sign-off.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232f7d4f'/><path d='M9 22c0-7 5-12 14-12-1 8-6 12-14 12zm0 0l7-6' stroke='white' stroke-width='2.4' fill='none' stroke-linecap='round'/></svg>">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <span class="logo" aria-hidden="true"></span>
+      <div>
+        <h1>Freshroots Demand Desk</h1>
+        <p class="sub" id="runMeta">Loading…</p>
+      </div>
+    </div>
+    <div class="top-actions">
+      <label class="field inline">
+        <span>Acting as</span>
+        <select id="role">
+          <option value="Raghav">Raghav · Demand Planner</option>
+          <option value="Procurement">Procurement</option>
+          <option value="Deepa">Deepa · Head of Ops</option>
+        </select>
+      </label>
+      <label class="field inline">
+        <span>Run</span>
+        <select id="runPick"></select>
+      </label>
+      <button class="btn primary" id="newRun">Start new run</button>
+      <button class="btn" id="signOut" title="Sign out">Sign out</button>
+    </div>
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button role="tab" data-tab="sheet" class="active">Recommendations</button>
+    <button role="tab" data-tab="raghav">Raghav's queue <span class="count" id="cRaghav"></span></button>
+    <button role="tab" data-tab="procurement">Procurement <span class="count" id="cProc"></span></button>
+    <button role="tab" data-tab="metrics">Metrics</button>
+    <button role="tab" data-tab="rules">Rules</button>
+    <button role="tab" data-tab="data">Data</button>
+  </nav>
+
+  <main id="view"></main>
+
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-inner" id="drawerBody"></div>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+  <div class="toast" id="toast" role="status"></div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "freshroots-demand-desk",
+  "private": true,
+  "type": "module",
+  "description": "Freshroots twice-weekly demand planning: Raghav's rules, exception queue, procurement sign-off.",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test test/rules.test.mjs test/server.test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.2.0"
+  }
+}
